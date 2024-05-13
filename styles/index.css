@@ -1,0 +1,332 @@
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('../assets/fonts/OpenSans-Regular.ttf');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-family: 'OpenSansRegular', Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: grey;
+    padding: 50px 20px;
+    background-image: url("../assets/images/header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.barra {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header h1 {
+    color: white;
+    padding-top: 50vh;
+    width: 800px;
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+
+header nav ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+section {
+    padding: 30px;
+}
+
+h2.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: lighter;
+    text-transform: capitalize;
+    font-size: 2em;
+}
+
+div.section-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.nosotros-item {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    line-height: 2em;
+    margin: 0 10px;
+}
+
+div.nosotros-item img.nosotros-img {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+div.nosotros-item h3 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+div.casas-venta-item {
+    flex-direction: column;
+    text-align: left;
+    justify-content: left;
+    line-height: 2em;
+    margin: 0 10px;
+    background-color: #e5e5e5;
+    border: #aeaeae 1px solid;
+}
+
+div.casas-venta-item img.casas-venta-img {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 10px;
+}
+
+div.casas-venta-item h3 {
+    margin: 0 15px 20px;
+    font-size: 1.7em;
+    line-height: 1.7em;
+    font-weight: bolder;
+}
+
+div.casas-venta-item p {
+    margin: 0 15px 20px;
+    line-height: 1.9em;
+}
+
+div.casas-venta-item b {
+    margin: 0 15px 20px;
+    line-height: 1.9em;
+    color: rgb(128, 176, 55);
+}
+
+div.casas-venta-item div.casas-venta-iconos {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin: 20px 15px;
+}
+
+div.casas-venta-item a.casas-ventas-ver-cada-una {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: orange;
+    align-content: center;
+    text-align: center;
+    line-height: 1.8em;
+    font-weight: bold;
+    width: 93%;
+    height: 50px;
+    margin: 0 15px 20px;
+}
+
+div.casas-venta-boton {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+section a.casas-ventas-ver-todas {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(128, 176, 55);
+    align-content: center;
+    text-align: center;
+    line-height: 1.8em;
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    margin: 30px 15px 20px;
+}
+
+section.contacto {
+    background-color: grey;
+    padding: 50px 20px;
+    background-image: url("../assets/images/encuentra.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+section.contacto h2 {
+    color: white;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+section.contacto p {
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+section.contacto a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: orange;
+    align-content: center;
+    text-align: center;
+    line-height: 1.8em;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 50px;
+}
+
+section.blog{
+    display: inline-block;
+    width: 59%;
+}
+
+div.blog-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.blog-content div.blog-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.blog-item img.blog-img {
+    width: 35%;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+div.blog-item div.blog-info {
+    width: 50%;
+}
+
+div.blog-item div.blog-info h3 {
+    margin: 0 15px 15px;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    font-weight: bolder;
+}
+
+div.blog-item div.linea-separadora {
+    background-color: rgb(128, 176, 55);
+    width: 120px;
+    height: 5px;
+    margin: 0 15px 15px;
+}
+
+div.blog-item div.blog-info p {
+    margin: 0 15px 20px;
+    line-height: 1.9em;
+}
+
+div.blog-item div.blog-info b {
+    color: orange;
+}
+
+section.comentarios {
+    display: inline-block;
+    width: 40%;
+}
+
+div.comentarios-contenedor {
+    background-color: rgb(128, 176, 55);
+    border-radius: 20px;
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    padding: 30px;
+}
+
+img.comentario-comillas {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    top: -170px;
+    margin-left: 20px;
+}
+
+div.comentarios-contenedor p {
+    margin-top: 20px;
+    display: inline-block;
+    color: white;
+    line-height: 3em;
+    font-size: 1.1em;
+    font-weight: lighter;
+    width: 70%;
+}
+
+div.comentarios-contenedor b {
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+    line-height: 3em;
+    margin-left: 300px;
+}
+
+/* ---------> FOOTER */
+footer {
+    background-color: rgb(69, 69, 69);
+    padding: 30px;
+}
+
+footer nav ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+footer p {
+    color: white;
+}

@@ -1,113 +1,125 @@
 /* GENERAL */
 
 @font-face {
-    font-family: 'OpenSansRegular';
-    src: url('../assets/fonts/OpenSans-Regular.ttf');
+  font-family: "OpenSansRegular";
+  src: url("../assets/fonts/OpenSans-Regular.ttf");
 }
 
-
 * {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-    color: rgb(0, 0, 0);
-    font-family: 'OpenSansRegular', Arial, Helvetica, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(179, 179, 179);
+  color: rgb(0, 0, 0);
+  font-family: "OpenSansRegular", Arial, Helvetica, sans-serif;
 }
-
 
 /* END OF GENERAL */
 
 /* HEADER */
 
 header {
-    background-color: rgb(13, 116, 175);
-    padding: 20px 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: auto;
+  background-color: rgb(13, 116, 175);
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
 }
 
-.barra {
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+header nav {
+  width: 100%;
+  background-color: none;
 }
 
-header div.barra img.logo-principal {
-    height: 50px;
-    width: 50px;
+header nav a {
+  text-align: center;
 }
 
-header div.barra h2 {
-    color: rgb(216, 175, 37);
-    font-size: 2em;
-    font-weight: bolder;
+header nav img.logo-principal {
+  height: 4em;
+  width: 4em;
 }
 
-header div.barra h6 {
-    font-size: 1.1em;
-    font-weight: bolder;
+header nav h2 {
+  color: rgb(216, 175, 37);
+  font-size: 2em;
+  line-height: 1.5em;
+  font-weight: bolder;
+  margin-bottom: 0;
+}
+
+header nav h6 {
+  color: black;
+  font-size: 0.9em;
+  line-height: 1.3em;
+  font-weight: bolder;
+}
+
+header nav button.navbar-toggler {
+  border: none;
+  color: white;
+}
+
+header nav div#navbarNav {
+  justify-content: flex-end;
 }
 
 header nav ul {
-    text-decoration: none;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-    font-size: 1.2em;
+header nav div ul.navbar-nav li a.nav-link,
+header nav div ul.navbar-nav li a.nav-link.active {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1.2em;
 }
 
 /* END OF HEADER */
 
-
 /* FOOTER */
 footer {
-    background-color: rgb(13, 116, 175);
-    padding: 30px 50px;
+  background-color: rgb(13, 116, 175);
+  padding: 30px 50px;
 }
 
 footer div.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 footer nav ul {
-    text-decoration: none;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
 }
 
 footer nav ul li a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-    font-size: 20px;
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 20px;
 }
 
 footer p {
-    color: white;
+  color: white;
 }
 
 /* END OF FOOTER */
@@ -115,263 +127,123 @@ footer p {
 /* SECTION */
 
 h2.section-title {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-weight: lighter;
-    text-transform: capitalize;
-    font-size: 2em;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: lighter;
+  text-transform: capitalize;
+  font-size: 2em;
 }
 
 section div.banner {
-    width: 100%;
-    height: 300px;
-    background-color: grey;
-    background-image: url("../assets/images/banner-autos.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
-    margin-bottom: 30px;
+  width: 100%;
+  height: 300px;
+  background-color: grey;
+  background-image: url("../assets/images/banner-autos.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin-bottom: 30px;
 }
-
 
 /* END OF SECTION */
 
+/* SECTION - FORM */
 
-
-
-
-
-div.section-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+section.formulario-principal {
+  margin: 3em;
 }
 
-div.nosotros-item {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    line-height: 2em;
-    margin: 0 10px;
+section.formulario-principal div.marco {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 1.5em;
 }
 
-div.nosotros-item img.nosotros-img {
-    height: 100px;
-    margin-bottom: 20px;
+section.formulario-principal div.marco h6 {
+  color: black;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  font-weight: bolder;
 }
 
-div.nosotros-item h3 {
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    font-size: 1.5em;
-    font-weight: bolder;
+/* END OF SECTION - FORM */
+
+/* SECTION - LISTA */
+
+section.lista {
+  margin: 3em;
 }
 
-div.casas-venta-item {
-    flex-direction: column;
-    text-align: left;
-    justify-content: left;
-    line-height: 2em;
-    margin: 0 10px;
-    background-color: #e5e5e5;
-    border: #aeaeae 1px solid;
-}
-
-div.casas-venta-item img.casas-venta-img {
-    width: 100%;
-    height: 350px;
-    margin-bottom: 10px;
-}
-
-div.casas-venta-item h3 {
-    margin: 0 15px 20px;
-    font-size: 1.7em;
-    line-height: 1.7em;
-    font-weight: bolder;
-}
-
-div.casas-venta-item p {
-    margin: 0 15px 20px;
-    line-height: 1.9em;
-}
-
-div.casas-venta-item b {
-    margin: 0 15px 20px;
-    line-height: 1.9em;
-    color: rgb(128, 176, 55);
-}
-
-div.casas-venta-item div.casas-venta-iconos {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    margin: 20px 15px;
-}
-
-div.casas-venta-item a.casas-ventas-ver-cada-una {
-    display: block;
-    text-decoration: none;
-    color: white;
-    background-color: orange;
-    align-content: center;
-    text-align: center;
-    line-height: 1.8em;
-    font-weight: bold;
-    width: 93%;
-    height: 50px;
-    margin: 0 15px 20px;
-}
-
-div.casas-venta-boton {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-}
-
-section a.casas-ventas-ver-todas {
-    display: block;
-    text-decoration: none;
-    color: white;
-    background-color: rgb(128, 176, 55);
-    align-content: center;
-    text-align: center;
-    line-height: 1.8em;
-    font-weight: bold;
-    width: 150px;
-    height: 50px;
-    margin: 30px 15px 20px;
-}
-
-section.contacto {
-    background-color: grey;
-    padding: 50px 20px;
-    background-image: url("../assets/images/encuentra.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-section.contacto h2 {
-    color: white;
-    margin-top: 80px;
-    margin-bottom: 20px;
-    font-size: 2em;
-}
-
-section.contacto p {
-    color: white;
-    margin-top: 40px;
-    margin-bottom: 80px;
-}
-
-section.contacto a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    background-color: orange;
-    align-content: center;
-    text-align: center;
-    line-height: 1.8em;
-    font-weight: bold;
-    width: 200px;
-    height: 50px;
-    margin-bottom: 50px;
-}
-
-section.blog{
-    display: inline-block;
-    width: 59%;
-}
-
-div.blog-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-div.blog-content div.blog-item {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-div.blog-item img.blog-img {
-    width: 35%;
-    height: 200px;
-    margin-bottom: 10px;
-}
-
-div.blog-item div.blog-info {
-    width: 50%;
-}
-
-div.blog-item div.blog-info h3 {
-    margin: 0 15px 15px;
-    font-size: 1.3em;
-    line-height: 1.3em;
-    font-weight: bolder;
-}
-
-div.blog-item div.linea-separadora {
-    background-color: rgb(128, 176, 55);
-    width: 120px;
-    height: 5px;
-    margin: 0 15px 15px;
-}
-
-div.blog-item div.blog-info p {
-    margin: 0 15px 20px;
-    line-height: 1.9em;
-}
-
-div.blog-item div.blog-info b {
-    color: orange;
-}
-
-section.comentarios {
-    display: inline-block;
-    width: 40%;
-}
-
-div.comentarios-contenedor {
-    background-color: rgb(128, 176, 55);
-    border-radius: 20px;
-    width: 500px;
-    height: 400px;
+section.lista div#spinner {
     margin: auto;
-    padding: 30px;
+    width: 100px;
+    height: 100px;
+    background-image: url("../assets/images/loader.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
 }
 
-img.comentario-comillas {
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    position: relative;
-    top: -170px;
-    margin-left: 20px;
+.responsiveTable {
+  width: 100%;
+  border-collapse: collapse;
 }
-
-div.comentarios-contenedor p {
-    margin-top: 20px;
-    display: inline-block;
-    color: white;
-    line-height: 3em;
-    font-size: 1.1em;
-    font-weight: lighter;
-    width: 70%;
+.responsiveTable td,
+.responsiveTable th {
+  padding: 12px 15px;
+  /* border: 1px solid #ddd; */
+  text-align: center;
+  font-size: 16px;
 }
-
-div.comentarios-contenedor b {
+.responsiveTable th {
+  background-color: #92c9e6;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.responsiveTable tbody tr:nth-child(even) {
+  background-color: #d1e8f5;
+}
+@media (max-width: 1000px) {
+  .responsiveTable thead {
+    display: none;
+  }
+  .responsiveTable,
+  .responsiveTable tbody,
+  .responsiveTable tr,
+  .responsiveTable td {
     display: block;
-    color: white;
+    width: 100%;
+  }
+  .responsiveTable tr {
+    margin-bottom: 15px;
+  }
+  .responsiveTable td {
+    padding-left: 50%;
+    text-align: left;
+    position: relative;
+  }
+  .responsiveTable td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 15px;
     font-weight: bold;
-    font-size: 1.3em;
-    line-height: 3em;
-    margin-left: 300px;
+    text-align: left;
+    text-transform: capitalize;
+  }
 }
+/* END OF SECTION - LISTA */
 
+/* --------- MEDIA QUERIES ---------- */
+
+/* FOOTER */
+@media only screen and (max-width: 820px) {
+  /* Oculta el nav bar del footer en pantallas chicas */
+  footer div.footer nav {
+    display: none;
+  }
+}

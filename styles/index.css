@@ -167,6 +167,14 @@ section.formulario-principal div.marco h6 {
   font-weight: bolder;
 }
 
+.btnEliminarShow {
+    display: block;
+}
+
+.btnEliminarHide {
+    display: none;
+}
+
 /* END OF SECTION - FORM */
 
 /* SECTION - LISTA */
@@ -175,7 +183,7 @@ section.lista {
   margin: 3em;
 }
 
-section.lista div#spinner {
+section.lista div.spinner {
     margin: auto;
     width: 100px;
     height: 100px;
@@ -183,13 +191,13 @@ section.lista div#spinner {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: none;
 }
 
 .responsiveTable {
   width: 100%;
   border-collapse: collapse;
 }
+
 .responsiveTable td,
 .responsiveTable th {
   padding: 12px 15px;
@@ -197,14 +205,18 @@ section.lista div#spinner {
   text-align: center;
   font-size: 16px;
 }
+
 .responsiveTable th {
   background-color: #92c9e6;
   color: #ffffff;
   text-transform: capitalize;
 }
+
 .responsiveTable tbody tr:nth-child(even) {
   background-color: #d1e8f5;
 }
+
+/* --------- MEDIA QUERIES ---------- */
 @media (max-width: 1000px) {
   .responsiveTable thead {
     display: none;

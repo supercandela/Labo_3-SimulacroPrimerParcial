@@ -35,9 +35,7 @@ window.addEventListener("DOMContentLoaded", () => {
   displayTabla();
   document.addEventListener("click", onClick);
   btnEliminar.addEventListener("click", onEliminarElemento);
-
-  // frm.addEventListener("submit", handlersubmit);
-  // btnCancelar.addEventListener("click", handlerCancelar);
+  btnCancelar.addEventListener("click", onCancelar);
 });
 
 // Evento click
@@ -187,17 +185,28 @@ function cambiarBotones(target) {
 }
 
 function onClick(e) {
-    console.log(e.target);
+  console.log(e.target);
   if (e.target.matches("td")) {
-    // console.log(e.target.parentNode.dataset.id); // el id lo recupero asi porque lo meti en data-id,
     let id = e.target.parentNode.dataset.id;
     const elemento = listado.filter((p) => p.id === parseInt(id))[0];
     cargarFormulario(elemento);
     cambiarBotones(e.target);
-  } else if (!e.target.matches("input") && !e.target.matches("textarea") && !e.target.matches("label")) {
+    document
+      .querySelector("section.institucional")
+      .scrollIntoView(false, { behavior: "smooth" });
+  } else if (
+    !e.target.matches("input") &&
+    !e.target.matches("textarea") &&
+    !e.target.matches("label")
+  ) {
     cambiarBotones(e.target);
     vaciarFormulario();
   }
+}
+
+function onCancelar() {
+  vaciarFormulario();
+  cambiarBotones();
 }
 
 // Manipulación Elementos
@@ -222,18 +231,18 @@ function guardarElemento(e) {
     kilometraje.value.trim() != "" &&
     potencia.value.trim() != ""
   ) {
-      borrarTabla();
-      if (parseInt(elementId.value) > 0) {
-          editarElemento();
-      } else {
-          agregarElementoNuevo();
-      }
-      postLocalStorage(dataLocalStorage, listado);
+    borrarTabla();
+    if (parseInt(elementId.value) > 0) {
+      editarElemento();
+    } else {
+      agregarElementoNuevo();
+    }
+    postLocalStorage(dataLocalStorage, listado);
     mostrarSpinner();
     setTimeout(() => {
-        displayTabla(listado);
-        vaciarFormulario();
-        ocultarSpinner();
+      displayTabla(listado);
+      vaciarFormulario();
+      ocultarSpinner();
     }, 3000);
   }
 }
@@ -257,55 +266,51 @@ function agregarElementoNuevo() {
   listado.push(element);
 }
 
-function editarElemento () {
-    console.log("Editar elemento")
-    let id = parseInt(elementId.value);
-    //VER MODAL
-    if (confirm("Confirma la modificación")) {
-        if (id) {
-            for (let i = 0; i < listado.length; i++) {
-                if (listado[i].id == id) {
-                    listado[i].titulo = titulo.value;
-                    let transTipo = document.querySelector(
-                        'input[name="transaccion"]:checked'
-                      ).value;
-                    listado[i].transaccion = transTipo;
-                    listado[i].descripcion = descripcion.value;
-                    listado[i].precio = precio.value;
-                    listado[i].puertas = puertas.value;
-                    listado[i].kilometraje = kilometraje.value;
-                    listado[i].potencia = potencia.value;
-                    break;
-                }
-            }
+function editarElemento() {
+  console.log("Editar elemento");
+  let id = parseInt(elementId.value);
+  //VER MODAL
+  if (confirm("Confirma la modificación")) {
+    if (id) {
+      for (let i = 0; i < listado.length; i++) {
+        if (listado[i].id == id) {
+          listado[i].titulo = titulo.value;
+          let transTipo = document.querySelector(
+            'input[name="transaccion"]:checked'
+          ).value;
+          listado[i].transaccion = transTipo;
+          listado[i].descripcion = descripcion.value;
+          listado[i].precio = precio.value;
+          listado[i].puertas = puertas.value;
+          listado[i].kilometraje = kilometraje.value;
+          listado[i].potencia = potencia.value;
+          break;
         }
+      }
     }
+  }
 }
 
 function onEliminarElemento(e) {
-    let id = parseInt(elementId.value);
-    //VER MODAL
-    if (confirm("Confirma la Eliminacion")) {
-      borrarTabla();
-      mostrarSpinner();
-      setTimeout(() => {
-        if (id) {
-          for (let i = 0; i < listado.length; i++) {
-            if (listado[i].id == id) {
-              listado.splice(i, 1);
-              break;
-            }
+  let id = parseInt(elementId.value);
+  //VER MODAL
+  if (confirm("Confirma la Eliminacion")) {
+    borrarTabla();
+    mostrarSpinner();
+    setTimeout(() => {
+      if (id) {
+        for (let i = 0; i < listado.length; i++) {
+          if (listado[i].id == id) {
+            listado.splice(i, 1);
+            break;
           }
-          postLocalStorage(dataLocalStorage, listado);
-          displayTabla(listado);
-          vaciarFormulario();
-          ocultarSpinner();
         }
-      }, 3000);
-    }
+        postLocalStorage(dataLocalStorage, listado);
+        displayTabla(listado);
+        vaciarFormulario();
+        ocultarSpinner();
+      }
+    }, 3000);
   }
+}
 
-// function handlerCancelar(e) {
-//   modificarFuncionBoton(e.target);
-//   limpiaFormulario(frm);
-// }
